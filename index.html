@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lanzador Satélite</title>
+</head>
+
+<body>
+
+    <button onclick="abrirVentana()">Lanzar Ventana Satélite</button>
+
+    <script>
+        function abrirVentana() {
+            let ancho = 400;
+            let alto = 300;
+
+            let width = screen.availWidth;
+            let height = screen.availHeight;
+
+            let left = (width / 2) - (ancho / 2);
+            let top = (height / 2) - (alto / 2);
+
+            let ventana = window.open(
+                'satelite.html',
+                'miVentana',
+                `width=${ancho},height=${alto},left=${left},top=${top},toolbar=no,scrollbars=yes`
+            );
+        }
+    </script>
+
+</body>
+
+</html>
